@@ -1,0 +1,5 @@
+This is a collection of files neccessary for testing web user interfaces using the selenium grid infrastructure.
+
+Execute the tests using 
+  cd ui-tests
+  bin/test.sh
