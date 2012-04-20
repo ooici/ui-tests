@@ -134,8 +134,8 @@ foreach $fn (@ARGV) {
       if ($skip == 0) {
 
         $ofn = $fn;
-        $ofn =~ s#^test.*/#generated_tests/#;
-        #$ofn =~ s#^test/#generated_tests/#;
+        $ofn =~ s#^rel1_testcases.*/#generated_tests/#;
+        #$ofn =~ s#^rel1_testcases/#generated_tests/#;
         $ofn =~ s#(\.java)#_$browser{$f}[$i] on $f$1#;
         $ofn =~ s/ /_/g;
         open(OUT, ">$ofn") || die "cannot open outfile $ofn\n";
