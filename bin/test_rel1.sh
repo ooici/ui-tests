@@ -1,7 +1,7 @@
 rm -rf reports generated_tests
 mkdir reports
 mkdir generated_tests
-bin/multiplex_rel1.pl test/*
+bin/multiplex_rel1.pl rel1_testcases/*
 ls generated_tests
 
 # REMOVE ALL BUT THE OSX TESTS
