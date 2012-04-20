@@ -6,6 +6,7 @@
 
 my $sg_server = "sg-hub.oceanobservatories.org";
 my $target_base = "http://67.58.40.163:3000/";
+# my $target_base = "http://ion-beta.oceanobservatories.org/";
 # my $target_base = "https://buildbot.oceanobservatories.org:9443/ooici-pres-0.1/";
 
 my %browser;

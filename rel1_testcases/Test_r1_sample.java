@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.regex.Pattern;
 
-public class Test_Sample extends SeleneseTestCase {
+public class Test_r1_sample extends SeleneseTestCase {
 	@Before
 	public void setUp() throws Exception {
 		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://ion-beta.oceanobservatories.org/");
@@ -14,7 +14,7 @@ public class Test_Sample extends SeleneseTestCase {
 	}
 
 	@Test
-	public void test_Sample() throws Exception {
+	public void test_r1_sample() throws Exception {
 		selenium.open("http://ion-beta.oceanobservatories.org/");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
