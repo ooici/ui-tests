@@ -8,6 +8,7 @@ ls generated_tests
 
 rm generated_tests/*inux*
 rm generated_tests/*indows*
+rm generated_tests/*sample*
 
 echo ant jar
 ant jar
