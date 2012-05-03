@@ -67,11 +67,20 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>40000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForTextPresent</td>
 	<td>Showing 1 to</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>pause</td>
+	<td>40000</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
