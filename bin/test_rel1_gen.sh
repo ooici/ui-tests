@@ -9,6 +9,7 @@ rm generated_tests/*inux*
 rm generated_tests/*indows*
 rm generated_tests/*sample*
 rm generated_tests/*heart*
+rm generated_tests/*orig*
 
 echo ant jar
 ant jar
