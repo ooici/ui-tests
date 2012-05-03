@@ -17,13 +17,21 @@ public class Test_r1_login extends SeleneseTestCase {
 	public void test_r1_login() throws Exception {
 		selenium.open("/");
 		selenium.click("id=login_button");
-		selenium.waitForPageToLoad("30000");
+		for (int second = 0;; second++) {
+			if (second >= 60) fail("timeout");
+			try { if ("Remember this selection:".equals(selenium.getText("//p[4]/label"))) break; } catch (Exception e) {}
+			Thread.sleep(1000);
+		}
+
 		selenium.select("id=providerId", "label=Google");
-		selenium.click("id=keepidp");
-		selenium.click("id=keepidp");
+		selenium.uncheck("id=keepidp");
 		selenium.click("id=wayflogonbutton");
-		selenium.waitForPageToLoad("30000");
-		Thread.sleep(5000);
+		for (int second = 0;; second++) {
+			if (second >= 60) fail("timeout");
+			try { if ("Sign in".equals(selenium.getText("css=h2"))) break; } catch (Exception e) {}
+			Thread.sleep(1000);
+		}
+
 		selenium.type("id=Email", "zootester63");
 		selenium.type("id=Passwd", "zootester63");
 		selenium.click("id=PersistentCookie");
@@ -35,6 +43,10 @@ public class Test_r1_login extends SeleneseTestCase {
 			Thread.sleep(1000);
 		}
 
+		selenium.open("https://google.com/");
+		selenium.click("id=gbg4");
+		selenium.click("id=gb_71");
+		selenium.waitForPageToLoad("30000");
 	}
 
 	@After
