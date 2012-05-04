@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.regex.Pattern;
 
-public class Test_r1_login extends SeleneseTestCase {
+public class Test_r1_slogin extends SeleneseTestCase {
 	@Before
 	public void setUp() throws Exception {
 		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://ion-beta.oceanobservatories.org/");
@@ -14,7 +14,7 @@ public class Test_r1_login extends SeleneseTestCase {
 	}
 
 	@Test
-	public void test_r1_login() throws Exception {
+	public void test_r1_slogin() throws Exception {
 		selenium.open("/");
 		selenium.click("id=login_button");
 		for (int second = 0;; second++) {
@@ -32,8 +32,8 @@ public class Test_r1_login extends SeleneseTestCase {
 			Thread.sleep(1000);
 		}
 
-		selenium.type("id=Email", "U_S_E_R-N_A_M_E_1");
-		selenium.type("id=Passwd", "P_A_S_S-W_O_R_D_1");
+		selenium.type("id=Email", "U_S_E_R-N_A_M_E");
+		selenium.type("id=Passwd", "P_A_S_S-W_O_R_D");
 		selenium.click("id=PersistentCookie");
 		selenium.click("id=signIn");
 		selenium.waitForPageToLoad("30000");

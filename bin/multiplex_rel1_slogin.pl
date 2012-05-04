@@ -82,7 +82,7 @@ foreach $fn (@ARGV) {
         $script_copy =~ s/A_C_C_O_U_N_T-N_A_M_E/$account{'new_user'}[$try_count]{'account_name'}/mg;
          
         #
-        # Rename the classes
+        # Rename the classes in your java Test Script if you copy/paste the file with a diff name!
         #
         my $ocn = $fn;
         $ocn =~ s#.*/##;
