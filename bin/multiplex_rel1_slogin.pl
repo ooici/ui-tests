@@ -41,44 +41,10 @@ foreach $fn (@ARGV) {
       print STDERR "    Considering browser specific script for: $browser{$f}[$i] on $f    "; 
       $skip = 0;
       # Begin section for skipping consistently failed tests.
-      if (($fn =~ /Test_01/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_01/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
+      #if (($fn =~ /Test_01/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
+      #if (($fn =~ /Test_01/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
 
-      if (($fn =~ /Test_02/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_02/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-
-      if (($fn =~ /Test_03/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /Windows XP/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /Windows XP/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /Linux/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /OS X/) && ($browser{$f}[$i] =~ /Safari/)) { $skip = 1;};
-      if (($fn =~ /Test_03/) && ( $f =~ /OS X/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-
-      if (($fn =~ /Test_04/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-
-      #if (($fn =~ /Test_05/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      #if (($fn =~ /Test_05/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /Windows XP/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /Windows XP/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /Linux/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /OS X/) && ($browser{$f}[$i] =~ /Safari/)) { $skip = 1;};
-      if (($fn =~ /Test_05/) && ( $f =~ /OS X/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-
-      if (($fn =~ /Test_06/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_06/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_06/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-
-      if (($fn =~ /Test_09/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_09/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-
-      if (($fn =~ /Test_13/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
-      if (($fn =~ /Test_13/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
-      if (($fn =~ /Test_13/) && ( $f =~ /Windows XP/) && ($browser{$f}[$i] =~ /IE/)) { $skip = 1;};
+      
       #print STDERR "    OUTPUTTING browser specific script for: $browser{$f}[$i] on $f\n";
 
       # End section for skipping consistently failed tests.
@@ -128,7 +94,7 @@ foreach $fn (@ARGV) {
     
         print OUT $script_copy;
         close(OUT);
-        # 0 is valid, so incriment it after using it...
+        # 0 is valid, so increment it after using it...
         $try_count++;
       } 
     } 
