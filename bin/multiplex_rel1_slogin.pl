@@ -37,23 +37,23 @@ foreach $fn (@ARGV) {
   close(FILE);
 
   for $f (keys %browser ) { 
-    for $i ( 0 .. $#{ $browser{$f} } ) 
-      print STDERR "    Considering browser specific script for: $browser{$f}[$i] on $f    "; 
-      $skip = 0;
+    for $i ( 0 .. $#{ $browser{$f} } ) {
+      #print STDERR "    Considering browser specific script for: $browser{$f}[$i] on $f    "; 
+      #$skip = 0;
       # Begin section for skipping consistently failed tests.
       #if (($fn =~ /Test_01/) && ( $f =~ /Windows7/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
       #if (($fn =~ /Test_01/) && ( $f =~ /Windows Vista/) && ($browser{$f}[$i] =~ /Firefox/)) { $skip = 1;};
 
       
-      #print STDERR "    OUTPUTTING browser specific script for: $browser{$f}[$i] on $f\n";
+      print STDERR "    OUTPUTTING browser specific script for: $browser{$f}[$i] on $f\n";
 
       # End section for skipping consistently failed tests.
-      if ($skip == 1) {
-        print STDERR "... SKIPPING!\n";
-      } else {
-        print STDERR "... GENERATING.\n";
-      }
-      if ($skip == 0) {
+      #if ($skip == 1) {
+      #  print STDERR "... SKIPPING!\n";
+      #} else {
+      #  print STDERR "... GENERATING.\n";
+      #}
+      #if ($skip == 0) {
 
         $ofn = $fn;
         $ofn =~ s#^rel1_testcases.*/#generated_tests/#;
@@ -67,16 +67,16 @@ foreach $fn (@ARGV) {
         # Modify the command to work without selenium grid setup
         #
         my $platform = "$browser{$f}[$i] on $f";
-  #      my $sg_server = "sg-hub.oceanobservatories.org";
-  #      my $target_base = "https://buildbot.oceanobservatories.org:8080/";
+        my $sg_server = "sg-hub.oceanobservatories.org";
+        my $target_base = "http://ion-beta.oceanobservatories.org/";
      
         $script_copy =~ s/selenium = new DefaultSelenium\("([^"]+)", 4444, "([^"]+)", "([^"]+)"\);/selenium = new DefaultSelenium("$sg_server", 4444, "$platform", "$target_base");/m;
   
         #
         # Now edit in the new username and password
         #  
-        $script_copy =~ s/U_S_E_R-N_A_M_E_1/$account{'new_user'}[0]{'name'}/mg;
-        $script_copy =~ s/P_A_S_S-W_O_R_D_1/$account{'new_user'}[0]{'password'}/mg;
+        #$script_copy =~ s/U_S_E_R-N_A_M_E_1/$account{'new_user'}[0]{'name'}/mg;
+        #$script_copy =~ s/P_A_S_S-W_O_R_D_1/$account{'new_user'}[0]{'password'}/mg;
         $script_copy =~ s/U_S_E_R-N_A_M_E/$account{'new_user'}[$try_count]{'name'}/mg;
         $script_copy =~ s/P_A_S_S-W_O_R_D/$account{'new_user'}[$try_count]{'password'}/mg;
         $script_copy =~ s/A_C_C_O_U_N_T-N_A_M_E/$account{'new_user'}[$try_count]{'account_name'}/mg;
@@ -96,7 +96,7 @@ foreach $fn (@ARGV) {
         close(OUT);
         # 0 is valid, so increment it after using it...
         $try_count++;
-      } 
+      #} 
     } 
   }
 }
