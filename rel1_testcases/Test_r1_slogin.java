@@ -37,7 +37,7 @@ public class Test_r1_slogin extends SeleneseTestCase {
 		Thread.sleep(1000);
 		selenium.click("id=PersistentCookie");
 		selenium.click("id=signIn");
-		selenium.waitForPageToLoad("5000");
+		selenium.waitForPageToLoad("30000");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
 			try { if (selenium.isTextPresent("Showing 1 to")) break; } catch (Exception e) {}
