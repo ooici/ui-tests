@@ -28,15 +28,16 @@ public class Test_r1_slogin extends SeleneseTestCase {
 		selenium.click("id=wayflogonbutton");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
-			try { if ("Sign in".equals(selenium.getText("css=h2"))) break; } catch (Exception e) {}
+			try { if (selenium.isTextPresent("for some information from your Google Account.")) break; } catch (Exception e) {}
 			Thread.sleep(1000);
 		}
 
 		selenium.type("id=Email", "U_S_E_R-N_A_M_E");
 		selenium.type("id=Passwd", "P_A_S_S-W_O_R_D");
+		Thread.sleep(1000);
 		selenium.click("id=PersistentCookie");
 		selenium.click("id=signIn");
-		selenium.waitForPageToLoad("30000");
+		selenium.waitForPageToLoad("5000");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
 			try { if (selenium.isTextPresent("Showing 1 to")) break; } catch (Exception e) {}
