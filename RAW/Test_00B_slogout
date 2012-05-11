@@ -17,13 +17,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForTextPresent</td>
+	<td>Change background image</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=gbg4</td>
 	<td></td>
 </tr>
 <tr>
+	<td>waitForTextPresent</td>
+	<td>zootester63@gmail.com</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=gb_71</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>30000</td>
 	<td></td>
 </tr>
 </tbody></table>

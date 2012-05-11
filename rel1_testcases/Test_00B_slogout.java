@@ -16,9 +16,22 @@ public class Test_00B_slogout extends SeleneseTestCase {
 	@Test
 	public void test_00B_slogout() throws Exception {
 		selenium.open("https://google.com/");
+		for (int second = 0;; second++) {
+			if (second >= 60) fail("timeout");
+			try { if (selenium.isTextPresent("Change background image")) break; } catch (Exception e) {}
+			Thread.sleep(1000);
+		}
+
 		selenium.click("id=gbg4");
+		for (int second = 0;; second++) {
+			if (second >= 60) fail("timeout");
+			try { if (selenium.isTextPresent("zootester63@gmail.com")) break; } catch (Exception e) {}
+			Thread.sleep(1000);
+		}
+
 		selenium.click("id=gb_71");
 		selenium.waitForPageToLoad("30000");
+		Thread.sleep(30000);
 	}
 
 	@After
