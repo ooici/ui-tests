@@ -10,7 +10,7 @@ rm generated_tests/*indows*
 rm generated_tests/*sample*
 rm generated_tests/*heart*
 rm generated_tests/*orig*
-rm generated_tests/*Test_r1_login*
+rm generated_tests/*r1_login*
 #rm generated_tests/*FireFox*
 
 echo ant jar
