@@ -13,66 +13,6 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=login_button</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>//p[4]/label</td>
-	<td>Remember this selection:</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=providerId</td>
-	<td>label=Google</td>
-</tr>
-<tr>
-	<td>uncheck</td>
-	<td>id=keepidp</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=wayflogonbutton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=h2</td>
-	<td>Sign in</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Email</td>
-	<td>zootester63</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=Passwd</td>
-	<td>zootester63</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=PersistentCookie</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=signIn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>Showing 1 to</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
 	<td>https://google.com/</td>
 	<td></td>
 </tr>

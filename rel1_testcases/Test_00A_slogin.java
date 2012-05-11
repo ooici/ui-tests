@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.regex.Pattern;
 
-public class Test_r1_login extends SeleneseTestCase {
+public class Test_00A_slogin extends SeleneseTestCase {
 	@Before
 	public void setUp() throws Exception {
 		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://ion-beta.oceanobservatories.org/");
@@ -14,7 +14,7 @@ public class Test_r1_login extends SeleneseTestCase {
 	}
 
 	@Test
-	public void test_r1_login() throws Exception {
+	public void test_00A_slogin() throws Exception {
 		selenium.open("/");
 		selenium.click("id=login_button");
 		for (int second = 0;; second++) {
@@ -28,12 +28,13 @@ public class Test_r1_login extends SeleneseTestCase {
 		selenium.click("id=wayflogonbutton");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
-			try { if ("Sign in".equals(selenium.getText("css=h2"))) break; } catch (Exception e) {}
+			try { if (selenium.isTextPresent("for some information from your Google Account.")) break; } catch (Exception e) {}
 			Thread.sleep(1000);
 		}
 
-		selenium.type("id=Email", "zootester63");
-		selenium.type("id=Passwd", "zootester63");
+		selenium.type("id=Email", "U_S_E_R-N_A_M_E");
+		selenium.type("id=Passwd", "P_A_S_S-W_O_R_D");
+		Thread.sleep(1000);
 		selenium.click("id=PersistentCookie");
 		selenium.click("id=signIn");
 		selenium.waitForPageToLoad("30000");
@@ -43,10 +44,6 @@ public class Test_r1_login extends SeleneseTestCase {
 			Thread.sleep(1000);
 		}
 
-		selenium.open("https://google.com/");
-		selenium.click("id=gbg4");
-		selenium.click("id=gb_71");
-		selenium.waitForPageToLoad("30000");
 	}
 
 	@After
