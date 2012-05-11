@@ -44,6 +44,15 @@ public class Test_00A_slogin extends SeleneseTestCase {
 			Thread.sleep(1000);
 		}
 
+		selenium.selectWindow("null");
+		selenium.click("id=logout_link");
+		selenium.waitForPageToLoad("30000");
+		for (int second = 0;; second++) {
+			if (second >= 60) fail("timeout");
+			try { if (selenium.isTextPresent("Getting Started")) break; } catch (Exception e) {}
+			Thread.sleep(1000);
+		}
+
 	}
 
 	@After

@@ -76,6 +76,21 @@
 	<td>Showing 1 to</td>
 	<td></td>
 </tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=logout_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Getting Started</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
