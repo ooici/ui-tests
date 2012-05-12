@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.regex.Pattern;
 
-public class Test_00A_slogin extends SeleneseTestCase {
+public class Test_0B_slogin extends SeleneseTestCase {
 	@Before
 	public void setUp() throws Exception {
 		selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://ion-beta.oceanobservatories.org/");
@@ -14,7 +14,7 @@ public class Test_00A_slogin extends SeleneseTestCase {
 	}
 
 	@Test
-	public void test_00A_slogin() throws Exception {
+	public void test_0B_slogin() throws Exception {
 		selenium.open("/");
 		selenium.click("id=login_button");
 		for (int second = 0;; second++) {
@@ -53,7 +53,7 @@ public class Test_00A_slogin extends SeleneseTestCase {
 			Thread.sleep(1000);
 		}
 
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 	}
 
 	@After
