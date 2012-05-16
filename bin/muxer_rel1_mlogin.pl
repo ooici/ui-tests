@@ -6,13 +6,14 @@ my $target_base = "http://ion-beta.oceanobservatories.org/";
 #my $target_base = "http://67.58.40.163:3000/";
 
 my %browser;
-   $browser{'Windows7'} 		= ['IE', 'Firefox'];
-   $browser{'Windows XP'} 		= ['IE', 'Firefox'];
-   $browser{'Windows Vista'} 	= ['IE', 'Firefox'];
+#   $browser{'Windows7'} 		= ['IE', 'Firefox'];
+#   $browser{'Windows XP'} 	= ['IE', 'Firefox'];
+#   $browser{'Windows Vista'} 	= ['IE', 'Firefox'];
    $browser{'Linux'} 			= ['Firefox'];
    $browser{'OS X'} 			= ['Safari', 'Firefox'];
-
-#??? Add more accounts
+# above browsers comments leaves only 2sys with 3-browsers
+# so, UIDs used are only: OOICI.Test, OOICI.Test1, OOICI.Test2   
+# Accounts
 
    #my $generic_password = 'zootester63';
    my $generic_password = 'BubbleEconomy2015'; 
