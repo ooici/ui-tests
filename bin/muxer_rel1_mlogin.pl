@@ -12,6 +12,8 @@ my %browser;
    $browser{'Linux'} 			= ['Firefox'];
    $browser{'OS X'} 			= ['Safari', 'Firefox'];
 
+#??? Add more accounts
+
    #my $generic_password = 'zootester63';
    my $generic_password = 'BubbleEconomy2015'; 
    my %account;
@@ -19,8 +21,6 @@ my %browser;
    #$account{'new_user'}[0]{'name'} = 'zootester63';
    #$account{'new_user'}[0]{'password'} = $generic_password;
    #$account{'new_user'}[0]{'account_name'} = 'Zoo Test1';
-
-#??? Add more accounts
 
    $account{'administrator'}[0]{'name'} = 'testerfor.ooici@gmail.com';
    $account{'administrator'}[0]{'password'} = $generic_password;
