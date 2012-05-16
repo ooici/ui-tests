@@ -13,9 +13,11 @@ my %browser;
    $browser{'OS X'} 			= ['Safari', 'Firefox'];
 # above browsers comments leaves only 2sys with 3-browsers
 # so, UIDs used are only: OOICI.Test, OOICI.Test1, OOICI.Test2   
-# Accounts
 
-   #my $generic_password = 'zootester63';
+# my $generic_password = 'zootester63';
+
+# Accounts
+  
    my $generic_password = 'BubbleEconomy2015'; 
    my %account;
    
@@ -62,6 +64,7 @@ my %browser;
    $account{'new_user'}[8]{'name'} = 'OOICI.Test8@gmail.com';
    $account{'new_user'}[8]{'password'} = $generic_password;
    $account{'new_user'}[8]{'account_name'} = 'OOICI Test8';
+
 ############################################
 
 # Handle each file on the command line
@@ -88,7 +91,7 @@ foreach $fn (@ARGV) {
         open(OUT, ">$ofn") || die "cannot open outfile $ofn\n";
         my $script_copy = $script;
   
-        # Modify the command to work without selenium grid setu
+        # Modify the command to work without selenium grid setup
         my $platform = "$browser{$f}[$i] on $f";
         my $sg_server = "sg-hub.oceanobservatories.org";
         my $target_base = "http://ion-beta.oceanobservatories.org/";
