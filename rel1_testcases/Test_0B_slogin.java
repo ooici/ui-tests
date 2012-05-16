@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.regex.Pattern;
 
+// Marco 05/16/2012
+
 public class Test_0B_slogin extends SeleneseTestCase {
 	@Before
 	public void setUp() throws Exception {

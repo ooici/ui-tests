@@ -22,9 +22,9 @@ my %browser;
    #$account{'new_user'}[0]{'password'} = $generic_password;
    #$account{'new_user'}[0]{'account_name'} = 'Zoo Test1';
 
-   $account{'administrator'}[0]{'name'} = 'testerfor.ooici@gmail.com';
-   $account{'administrator'}[0]{'password'} = $generic_password;
-   $account{'administrator'}[0]{'account_name'} = 'OOICI Testing Admin';
+   #$account{'administrator'}[0]{'name'} = 'testerfor.ooici@gmail.com';
+   #$account{'administrator'}[0]{'password'} = $generic_password;
+   #$account{'administrator'}[0]{'account_name'} = 'OOICI Testing Admin';
 
    $account{'new_user'}[0]{'name'} = 'OOICI.Test@gmail.com';
    $account{'new_user'}[0]{'password'} = $generic_password;
