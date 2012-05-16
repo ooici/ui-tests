@@ -4,7 +4,7 @@ mkdir generated_tests
 bin/muxer_rel1_slogin.pl rel1_testcases/*
 ls generated_tests
 
-# REMOVE any that's not needed, like the Linux/Windows/etc tests.
+# REMOVE any TC not needed, like the Linux/Windows/etc tests.
 rm generated_tests/*inux*
 rm generated_tests/*indows*
 #rm generated_tests/*FireFox*
