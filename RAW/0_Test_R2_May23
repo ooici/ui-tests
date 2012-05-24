@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:3000/" />
+<title>Test_R2_May23</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Test_R2_May23</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.google.com/doodles/finder/2012/All%20doodles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Doodles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/data_products/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Data Products</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Data Products</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Observatories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Observatories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Platforms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Platforms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Platform Models</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Platform Models</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Instrument Agents</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Instrument Agents</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Data Process Definitions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Data Process Definitions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Frame Of References</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Frame of References</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Observatory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Observatory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Platform Model</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Platform Model</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Platform Device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Platform Device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Intrument Model</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Instrument Model</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Instrument Device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Instrument Device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Frame of Reference</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Frame of Reference</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://google.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>I'm Feeling Lucky</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://www.google.com/doodles/finder/2012/All%20doodles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Doodles</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

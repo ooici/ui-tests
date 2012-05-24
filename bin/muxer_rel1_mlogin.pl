@@ -1,6 +1,13 @@
 #!/usr/bin/perl
 #
 # Site specific customizations section
+
+use Cwd qw();
+my $path = Cwd::cwd();
+print "\nWorking DIR = $path\n";  
+print "Tracer --> top-of-module\n\n";
+
+
 my $sg_server = "sg-hub.oceanobservatories.org";
 my $target_base = "http://ion-beta.oceanobservatories.org/";
 #my $target_base = "http://67.58.40.163:3000/";
@@ -69,10 +76,15 @@ my %browser;
 
 # Handle each file on the command line
 foreach $fn (@ARGV) {
+
+print "Tracer --> inside loop\n";
+print "fn = $fn \n\n";
+
   my $script = "";
   my $try_count = 0;
   print STDERR "Processing  $fn \n";
   open(FILE, $fn) || die "cannot open file $fn\n";
+  
   while (<FILE>) {
     s/^\s*package com.example.tests;$//;
     $script .= $_;
@@ -81,7 +93,7 @@ foreach $fn (@ARGV) {
 
   for $f (keys %browser ) {
     for $i ( 0 .. $#{ $browser{$f} } ) {
-      
+
       print STDERR "    OUTPUTTING browser specific script for: $browser{$f}[$i] on $f\n";
       
         $ofn = $fn;
@@ -117,6 +129,8 @@ foreach $fn (@ARGV) {
         close(OUT);
         # 0 is valid, so increment it after using it...
         $try_count++;
+        
+        print "\nTracer --> END\n\n";
        
     } 
   }
