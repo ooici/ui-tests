@@ -13,27 +13,7 @@
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>https://www.google.com/</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTextPresent</td>
-	<td>A faster way to browse the web</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>open</td>
 	<td>/</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
@@ -113,7 +93,7 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
+	<td>15000</td>
 	<td></td>
 </tr>
 </tbody></table>

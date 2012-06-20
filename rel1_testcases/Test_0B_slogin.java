@@ -6,8 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.regex.Pattern;
 
-// Marco 05/16/2012
-
 public class Test_0B_slogin extends SeleneseTestCase {
 	@Before
 	public void setUp() throws Exception {
@@ -17,7 +15,16 @@ public class Test_0B_slogin extends SeleneseTestCase {
 
 	@Test
 	public void test_0B_slogin() throws Exception {
+		selenium.open("https://www.google.com/");
+		for (int second = 0;; second++) {
+			if (second >= 60) fail("timeout");
+			try { if (selenium.isTextPresent("A faster way to browse the web")) break; } catch (Exception e) {}
+			Thread.sleep(1000);
+		}
+
+		Thread.sleep(5000);
 		selenium.open("/");
+		Thread.sleep(5000);
 		selenium.click("id=login_button");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
@@ -39,7 +46,7 @@ public class Test_0B_slogin extends SeleneseTestCase {
 		Thread.sleep(1000);
 		selenium.click("id=PersistentCookie");
 		selenium.click("id=signIn");
-		selenium.waitForPageToLoad("15000");
+		selenium.waitForPageToLoad("30000");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
 			try { if (selenium.isTextPresent("Showing 1 to")) break; } catch (Exception e) {}
@@ -48,14 +55,14 @@ public class Test_0B_slogin extends SeleneseTestCase {
 
 		selenium.selectWindow("null");
 		selenium.click("id=logout_link");
-		selenium.waitForPageToLoad("15000");
+		selenium.waitForPageToLoad("30000");
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
 			try { if (selenium.isTextPresent("Getting Started")) break; } catch (Exception e) {}
 			Thread.sleep(1000);
 		}
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@After
